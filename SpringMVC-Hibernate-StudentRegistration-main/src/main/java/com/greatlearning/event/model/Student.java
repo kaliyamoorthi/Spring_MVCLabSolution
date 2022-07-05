@@ -1,4 +1,4 @@
-package com.greatlearning.event.model;
+package com.greatlearning.fest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="students")
+@Table(name="collegefest")
 public class Student {
     @Id
     int id;
