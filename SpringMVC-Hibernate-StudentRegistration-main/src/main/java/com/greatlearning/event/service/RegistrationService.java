@@ -1,7 +1,7 @@
-package com.greatlearning.event.service;
+package com.greatlearning.fest.service;
 
-import com.greatlearning.event.model.Student;
-import com.greatlearning.event.repository.StudentRepository;
+import com.greatlearning.fest.model.Student;
+import com.greatlearning.fest.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
