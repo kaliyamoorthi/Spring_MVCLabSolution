@@ -1,4 +1,4 @@
-package com.greatlearning.debate.event.controller;
+package com.greatlearning.fest.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.greatlearning.debate.event.entity.Student;
-import com.greatlearning.debate.event.service.IStudentService;
+import com.greatlearning.fest.entity.Student;
+import com.greatlearning.fest.service.IStudentService;
 
 @Controller
 @RequestMapping("/Student")
