@@ -1,4 +1,4 @@
-package com.greatlearning.debate.event.dao;
+package com.greatlearning.fest.dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.greatlearning.debate.event.entity.Student;
+import com.greatlearning.fest.entity.Student;
 
 @Repository
 public class StudentDaoImpl implements IStudentDao {
