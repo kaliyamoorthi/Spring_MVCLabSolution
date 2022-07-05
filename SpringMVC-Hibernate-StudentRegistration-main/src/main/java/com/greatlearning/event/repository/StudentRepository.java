@@ -1,6 +1,6 @@
-package com.greatlearning.event.repository;
+package com.greatlearning.fest.repository;
 
-import com.greatlearning.event.model.Student;
+import com.greatlearning.fest.model.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +23,7 @@ public class StudentRepository {
     public Student registerStudent(Student student){
         Session session = sessionFactory.getCurrentSession();
         session.persist(student);
-        //students.add(student);
-        //System.out.println("Registered Students:"+students.toString());
+        
         return student;
     }
 
@@ -37,25 +36,14 @@ public class StudentRepository {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(updatedStudent);
 
-//            Optional<Student> studentOptional = students
-//                                               .stream()
-//                                               .filter(order -> order.getId() == id)
-//                                                .findAny();
-//            if(studentOptional.isPresent()) {
-//                Student studentFetchedFromList = studentOptional.get();
-//                studentFetchedFromList.setName(updatedStudent.getName());
-//                studentFetchedFromList.setDepartment(updatedStudent.getDepartment());
-//                studentFetchedFromList.setId(updatedStudent.getId());
-//                studentFetchedFromList.setCountry(updatedStudent.getCountry());
-//                return studentFetchedFromList;
-//            }
+
             return null;
     }
 
     public void deleteStudentbyId(int id){
         Session session = sessionFactory.getCurrentSession();
         session.delete(session.get(Student.class,id));
-        //students.removeIf(student -> student.getId()==id);
+       
         return;
     }
 
