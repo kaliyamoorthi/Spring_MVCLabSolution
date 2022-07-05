@@ -1,4 +1,4 @@
-package com.greatlearning.debate.event.service;
+package com.greatlearning.fest.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.greatlearning.debate.event.dao.IStudentDao;
-import com.greatlearning.debate.event.entity.Student;
+import com.greatlearning.fest.dao.IStudentDao;
+import com.greatlearning.fest.entity.Student;
 
 @Service
 @Transactional
