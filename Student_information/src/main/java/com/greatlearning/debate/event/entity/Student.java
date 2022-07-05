@@ -1,4 +1,4 @@
-package com.greatlearning.debate.event.entity;
+package com.greatlearning.fest.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
