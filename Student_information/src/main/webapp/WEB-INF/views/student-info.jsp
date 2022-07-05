@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" import="java.util.List,com.greatlearning.debate.event.entity.Student"%>
+	pageEncoding="ISO-8859-1" import="java.util.List,com.greatlearning.fest.entity.Student"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Fest Student Registration Details</title>
 </head>
 <body>
 	<div>
