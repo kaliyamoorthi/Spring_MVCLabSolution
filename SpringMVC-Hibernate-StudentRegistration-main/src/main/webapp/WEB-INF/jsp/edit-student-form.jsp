@@ -1,7 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
    <head>
-      <title>Spring MVC Form Handling</title>
+      <title>Spring MVC </title>
    </head>
 
    <body>
