@@ -1,8 +1,8 @@
-package com.greatlearning.debate.event.dao;
+package com.greatlearning.fest.dao;
 
 import java.util.List;
 
-import com.greatlearning.debate.event.entity.Student;
+import com.greatlearning.fest.entity.Student;
 
 public interface IStudentDao {
 
