@@ -4,7 +4,7 @@
 <html>
 <head><%@ page isELIgnored="false" %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>College Fest Registration</title>
+<title>Debate Registration</title>
 <!--link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 <script src="<c:url value="/resources/js/jquery-1.11.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script-->
@@ -12,7 +12,7 @@
 <body>
  <div class="container">
   <div class="col-md-offset-1 col-md-10">
-   <h2>Event -  Registered Students</h2>
+   <h2>Event - Debate Registered Students</h2>
    <hr />
 
    <input type="button" value="Register Student"
@@ -55,7 +55,7 @@
          <!-- display the update link -->
           <a href="${updateLink}">Update</a>
          | <a href="${deleteLink}"
-         onclick="if (!(confirm(' you want to delete this student?'))) return false">Delete</a>
+         onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">Delete</a>
         </td>
 
        </tr>

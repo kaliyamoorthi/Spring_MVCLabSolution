@@ -1,6 +1,6 @@
-package com.greatlearning.fest.repository;
+package com.greatlearning.event.repository;
 
-import com.greatlearning.fest.model.Student;
+import com.greatlearning.event.model.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +22,8 @@ public class StudentRepository {
     public Student registerStudent(Student student){
         Session session = sessionFactory.getCurrentSession();
         session.persist(student);
-        
+        //students.add(student);
+        //System.out.println("Registered Students:"+students.toString());
         return student;
     }
 
@@ -32,18 +32,29 @@ public class StudentRepository {
         List<Student> listStudents = session.createQuery("from Student",Student.class).getResultList();
         return listStudents;
     }
-    public Student updateStudentDetails(Student id,Student updatedStudent){
+    public Student updateStudentDetails(int id,Student updatedStudent){
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(updatedStudent);
 
-
+//            Optional<Student> studentOptional = students
+//                                               .stream()
+//                                               .filter(order -> order.getId() == id)
+//                                                .findAny();
+//            if(studentOptional.isPresent()) {
+//                Student studentFetchedFromList = studentOptional.get();
+//                studentFetchedFromList.setName(updatedStudent.getName());
+//                studentFetchedFromList.setDepartment(updatedStudent.getDepartment());
+//                studentFetchedFromList.setId(updatedStudent.getId());
+//                studentFetchedFromList.setCountry(updatedStudent.getCountry());
+//                return studentFetchedFromList;
+//            }
             return null;
     }
 
     public void deleteStudentbyId(int id){
         Session session = sessionFactory.getCurrentSession();
         session.delete(session.get(Student.class,id));
-       
+        //students.removeIf(student -> student.getId()==id);
         return;
     }
 
@@ -52,12 +63,4 @@ public class StudentRepository {
         Session session = sessionFactory.getCurrentSession();
         return session.get(Student.class,id);
     }
-
-	public List<Student> getStudents() {
-		return students;
-	}
-
-	public void setStudents(List<Student> students) {
-		this.students = students;
-	}
 }

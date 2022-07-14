@@ -1,4 +1,4 @@
-package com.greatlearning.fest.config;
+package com.greatlearning.event.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,7 +26,7 @@ public class AppContext {
         sessionFactory.setDataSource(dataSource());
         /*Change name of Package to name of model class package */
         sessionFactory.setPackagesToScan(new String[] {
-                "com.greatlearning.fest"
+                "com.greatlearning.event"
         });
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;

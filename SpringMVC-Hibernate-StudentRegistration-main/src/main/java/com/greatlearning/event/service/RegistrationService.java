@@ -1,7 +1,7 @@
-package com.greatlearning.fest.service;
+package com.greatlearning.event.service;
 
-import com.greatlearning.fest.model.Student;
-import com.greatlearning.fest.repository.StudentRepository;
+import com.greatlearning.event.model.Student;
+import com.greatlearning.event.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class RegistrationService {
     public List<Student> getRegisteredStudents(){
         return this.studentRepository.getRegisteredStudents();
     }
-    public Student updateStudentDetails(Student id, Student student){
+    public Student updateStudentDetails(int id, Student student){
         return this.studentRepository.updateStudentDetails(id,student);
     }
     public void deleteStudent(int id){
@@ -34,9 +34,4 @@ public class RegistrationService {
     public Student getStudent(int id) {
         return this.studentRepository.getStudentbyId(id);
     }
-
-	public void updateStudentDetails(String id, Student student) {
-		// TODO Auto-generated method stub
-		
-	}
 }
